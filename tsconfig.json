@@ -31,7 +31,8 @@
       "@/routes/*": ["routes/*"],
       "@/services/*": ["services/*"],
       "@/utils/*": ["utils/*"],
-      "@/data/*": ["data/*"]
+      "@/data/*": ["data/*"],
+      "@/config/*": ["config/*"]
     }
   },
   "include": ["src/**/*"],

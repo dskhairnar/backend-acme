@@ -1,18 +1,16 @@
-// Type definitions for Acme Corp Patient Dashboard Backend
-// Matches frontend types for consistency
-
 import { Request } from 'express';
 
 export interface User {
   id: string;
   email: string;
-  firstName: string;
-  lastName: string;
-  dateOfBirth: string;
-  phone?: string;
-  enrollmentDate: string;
+  role?: 'admin' | 'user' | 'moderator';
   createdAt?: string;
   updatedAt?: string;
+  firstName?: string;
+  lastName?: string;
+  dateOfBirth?: string;
+  phone?: string;
+  enrollmentDate?: string;
 }
 
 export interface WeightEntry {
@@ -130,6 +128,7 @@ export interface UpdateUserProfileRequest {
 // Database Models (In-memory for demo)
 export interface UserModel extends User {
   passwordHash: string;
+  role?: 'admin' | 'user' | 'moderator';
 }
 
 // Error Types
